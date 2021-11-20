@@ -12,6 +12,6 @@
 
 ## Resources
 
-![Docs](https://www.modzy.com/developers/?utm_source=devpost&utm_medium=webpage&utm_term=developer-resources&utm_content=landing+page&utm_campaign=Hackathon)
+[Docs](https://www.modzy.com/developers/?utm_source=devpost&utm_medium=webpage&utm_term=developer-resources&utm_content=landing+page&utm_campaign=Hackathon)
 
-![Modzy Flask Quick Start](https://docs.modzy.com/docs/modzy-in-a-flask-app-quickstart)
+[Modzy Flask Quick Start](https://docs.modzy.com/docs/modzy-in-a-flask-app-quickstart)
