@@ -1,0 +1,48 @@
+{% extends "base.html" %}
+
+{% block content %}
+<div class="container py-3">
+    <div class="header p-3 pb-md-4 mx-auto text-center">
+      <h1 class="display-4 fw-normal">YT Comments Sentiment</h1>
+      <p class="fs-5 text-muted">This model analyzes text to find the sentiment expressed in the text.</p>
+    </div>
+
+	<div class="p-3 pb-md-3 mx-auto col-8 text-center">
+		<form class="card p-2 " action="" method="post" novalidate>
+		 {{ form.hidden_tag() }}
+		  <div class="input-group">
+			<input type="text" class="form-control" name='input_text' id='input_text' placeholder="Youtube Video Link">
+			<button type="submit" id='submit' name='submit' class="btn btn-secondary">Analyze</button>
+		  </div>
+		</form>
+	</div>
+
+{%if data is none %}
+	<div class="text-danger p-3 pb-md-3 mx-auto col-8 text-center">
+		<h3>HI </h3>
+	</div>
+{% else %}
+	<div class="p-3 pb-md-3 mx-auto col-8 text-center">
+		<div class="col-md-5 col-lg-12 order-md-last mt-3">
+
+			<table class="table">
+			  <thead>
+				<tr>
+				  <th scope="col">Class</th>
+				  <th scope="col">Count</th>
+				</tr>
+			  </thead>
+			  <tbody>
+			  {% for s in data %}
+			<tr>
+			  <td>{{ s['class'] }}</td>
+			 <td>{{ s['counts'] }}</td>
+			</tr>
+			  {% endfor %}
+			  </tbody>
+			</table>
+		</div>
+	</div>
+{%endif%}
+</div>
+{% endblock %}
